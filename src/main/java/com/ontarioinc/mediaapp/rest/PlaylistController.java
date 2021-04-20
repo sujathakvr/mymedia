@@ -20,6 +20,11 @@ public class PlaylistController {
 	@Autowired
 	private PlaylistService playListService;
 	
+	@GetMapping("/")
+	public String home() {
+		return ("<h1>Welcome</h1>");
+	}
+	
 	@GetMapping("/playlists")
 	public List<Playlist> getAllPlaylist() {
 		return playListService.getAllPlaylists();
