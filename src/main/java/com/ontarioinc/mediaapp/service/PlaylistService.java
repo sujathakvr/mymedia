@@ -1,6 +1,5 @@
 package com.ontarioinc.mediaapp.service;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -39,7 +38,7 @@ public class PlaylistService {
     }
 
     // fetch all songs inside the given playlist using `@NamedNativeQuery`
-    public List<Song> getSongs(BigInteger playlistId) {
+    public List<Song> getSongs(String playlistId) {
         List<Song> resultList = entityManager.createNamedQuery("songsByPlaylistId", Song.class)
             .setParameter(1, playlistId)
             .getResultList();
