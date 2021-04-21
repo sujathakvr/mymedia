@@ -31,6 +31,10 @@ dependencies {
 
     implementation 'io.springfox:springfox-swagger2:2.10.5'
     implementation 'io.springfox:springfox-swagger-ui:2.10.5'
+    
+    compile 'org.springframework.ldap:spring-ldap-core'
+    compile 'org.springframework.security:spring-security-ldap'
+    compile 'com.unboundid:unboundid-ldapsdk'
         
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
